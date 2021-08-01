@@ -1,0 +1,47 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 100%;
+        z-index: 1;
+      }
+      
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 91%;
+        width: 85%;
+        margin-left: 15%;
+        margin: 0;
+        background-color: #1db593;
+        
+      }
+
+    /*Needs a lot of work*/
+    #info_div{
+        z-index: 100;
+        position: absolute;
+        background-color: #1db593;
+        top: 164px;
+        left: 1386px;
+        
+        padding: 15px;
+        padding-right: 217px;
+        padding-bottom: 744px;
+    }
+
+    /*Come back to this*/
+    #info_div.campgroundInfo.name{
+        font-style: italic;
+    }
+
+    #pac-input{
+        position: fixed !important;
+        top: 65px !important;
+        left: 380px !important;
+        z-index: 1000 !important;
+        width: 600px;
+        height: 40px;
+        font-size: 20px;
+
+
+    }
