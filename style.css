@@ -21,12 +21,16 @@
         z-index: 100;
         position: absolute;
         background-color: #1db593;
-        top: 164px;
+        top: 160px;
         left: 1386px;
         
         padding: 15px;
         padding-right: 217px;
         padding-bottom: 744px;
+    }
+    
+    #info_div img{
+        width: 480px;
     }
 
     /*Come back to this*/
