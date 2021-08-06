@@ -40,7 +40,8 @@ var campgrounds = [
       address: "3509 NE East Devils Lake Rd, Otis, OR 97368",
       picture: "https://bbcamp.org/wp-content/uploads/2020/05/dinning-hall.jpg",
       site: "https://bbcamp.org/lincolncity/",
-      desc: "Anchored on the beautiful Devil’s Lake, BB Camp Retreat Center is a modern 13-acre lakefront facility, perfectly situated on the Oregon Coast! We offer friendly, professional, and affordable solutions for all your event and retreat needs for groups from 25 to 380 people. We are located just over two miles outside the coastal town of Lincoln City, which provides easy access to the beach, hiking trails, and many other outdoor attractions. After your adventures, the outlet malls and restaurants are just a stone’s throw away."
+      desc: "Anchored on the beautiful Devil’s Lake, BB Camp Retreat Center is a modern 13-acre lakefront facility, perfectly situated on the Oregon Coast! We offer friendly, professional, and affordable solutions for all your event and retreat needs for groups from 25 to 380 people. We are located just over two miles outside the coastal town of Lincoln City, which provides easy access to the beach, hiking trails, and many other outdoor attractions. After your adventures, the outlet malls and restaurants are just a stone’s throw away.",
+      rv: true
 
   },
 
@@ -50,7 +51,8 @@ var campgrounds = [
       address: "1015 Southwest 51st Street, Lincoln City, OR 97367",
       picture: "https://i4.ypcdn.com/blob/ebc56e22627d211451bf4b9eaf5d52fea54f2876_400x280_crop.jpg",
       site: "https://www.ohwy.com/or/t/trnsetrp.htm/",
-      desc: "Located five miles from the junction of Hwys 18 and 101 in Lincoln City on SW 51st Street. Seven RV/Trailer sites (any length) with electricity, piped water and sewer hookups. Flush toilets and showers available. Nearby store, cafe, and laundry. Leashed pets allowed. Open year round."
+      desc: "Located five miles from the junction of Hwys 18 and 101 in Lincoln City on SW 51st Street. Seven RV/Trailer sites (any length) with electricity, piped water and sewer hookups. Flush toilets and showers available. Nearby store, cafe, and laundry. Leashed pets allowed. Open year round.",
+      rv: false
   },
 
   {
@@ -59,7 +61,8 @@ var campgrounds = [
       address: "4985 N, US-101, Depoe Bay, OR 97341",
       picture: "https://i.ytimg.com/vi/GxXNFrb2h7I/maxresdefault.jpg",
       site: "https://seaandsandrvpark.com/",
-      desc: "Sea & Sand RV Park is conveniently located on Highway 101 just three miles north of Depoe Bay on the central Oregon coastline and eight miles south of Lincoln City. There are spectacular beach and ocean views from our terraced ocean RV sites, as well as beautiful and cozy forested campground sites, all with easy beach access. The sunsets in the summers and the storms in the winters offer wonderful memories to all our guests, and their pets. Whether you love the grey whales, are storm watchers, sightseers, want to fish, try your luck at one of the casinos, shop the boutiques, or just be a beach bum or couch potato for a few days- – -Sea & Sand RV Park provides you with a home away from home that is quiet, peaceful, relaxing and conveniently located. Activities are numerous for all ages. The seven mile sandy beach provides a sand box of agates, shells, and sometimes Japanese floats. Sightings of the migrating grey whales are almost a daily happening in Depoe Bay, and there are charter fleets at Depoe Bay and Newport for deep sea fishing, crabbing and whale watching. Also, fresh water fishing, including steelhead, salmon, and trout are in the local rivers and streams. One mile away is the beautiful resort of Salishan providing an 18 hole golf course and excellent shopping. If you like aquariums, lighthouses, factory outlets, good restaurants, casino gaming, and breathtaking views of the ocean you will find it all between Newport and Lincoln City."
+      desc: "Sea & Sand RV Park is conveniently located on Highway 101 just three miles north of Depoe Bay on the central Oregon coastline and eight miles south of Lincoln City. There are spectacular beach and ocean views from our terraced ocean RV sites, as well as beautiful and cozy forested campground sites, all with easy beach access. The sunsets in the summers and the storms in the winters offer wonderful memories to all our guests, and their pets. Whether you love the grey whales, are storm watchers, sightseers, want to fish, try your luck at one of the casinos, shop the boutiques, or just be a beach bum or couch potato for a few days- – -Sea & Sand RV Park provides you with a home away from home that is quiet, peaceful, relaxing and conveniently located. Activities are numerous for all ages. The seven mile sandy beach provides a sand box of agates, shells, and sometimes Japanese floats. Sightings of the migrating grey whales are almost a daily happening in Depoe Bay, and there are charter fleets at Depoe Bay and Newport for deep sea fishing, crabbing and whale watching. Also, fresh water fishing, including steelhead, salmon, and trout are in the local rivers and streams. One mile away is the beautiful resort of Salishan providing an 18 hole golf course and excellent shopping. If you like aquariums, lighthouses, factory outlets, good restaurants, casino gaming, and breathtaking views of the ocean you will find it all between Newport and Lincoln City.",
+      rv: true
   }
 
 
@@ -191,16 +194,30 @@ function moveMap(location, map){
     map.setCenter(location)
 }
 
-function doFilterUpdate(campgrounds, map, markers){
+function doFilterUpdate(){
   RV = document.getElementById("filter-rv");
-
+  RVvalue = RV.options[RV.selectedIndex].value;
+  console.log(RVvalue);
+  console.log("Update button clicked.")
   for (const x in campgrounds){
+    console.log(campgrounds[x].rv)
+   if (RVvalue == "Yes"){
     if (campgrounds[x].rv == true){
-        markers[x].setVisible(true);
+       markers[x].setVisible(true);
     }
     else{
-      markers[x].setVisible(false);
+     markers[x].setVisible(false);
     }
+  }
+  if (RVvalue == "No"){
+    if (campgrounds[x].rv == true){
+       markers[x].setVisible(false);
+    }
+    else{
+     markers[x].setVisible(true);
+    }
+  }
+
   }
 
 }
@@ -209,8 +226,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
   var filterUpdateButton = document.getElementById('filter-update-button');
   if (filterUpdateButton) {
-    filterUpdateButton.addEventListener('click', doFilterUpdate(campgrounds, map, markers))
-    console.log("Update button clicked.")
+    filterUpdateButton.addEventListener('click', doFilterUpdate)
+    
   }
 
 });
