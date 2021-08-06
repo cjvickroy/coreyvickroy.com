@@ -33,6 +33,13 @@
         width: 480px;
     }
 
+    .filter-container{
+      position: absolute;
+      left: 1050px;
+      top: 0px;
+
+    }
+
     /*Come back to this*/
     #info_div.campgroundInfo.name{
         font-style: italic;
