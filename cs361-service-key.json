@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cs361-project-321201",
+  "private_key_id": "cbbe4368d4f72fdbfb087fcabc1aa9156073f8c1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCmesztAG5UbcK1\nkPrdQwrX2makNuQ2VVhQ4pVHSfJ3Eu6ZQfK05qmbian2sKdEynFqSuLko4ydxET+\ntqQvyrtjCAGpXgqbD3IxWTBw5qWAlmHLCzOH+JYBF+6t2w1XrvIthdVuDg7I0mNv\nCd/i6xUEHJMEPeCGVnaswVWPuq/KSs0vB7XKGpoP4Lmjf+/36TCj51JFhGI7Qniy\nPoiau1EksG03yfl2C1ACnt8wQFbhb5IHznAmnqdCu6vSNi3cvunyjtp+nhAnPH4T\n0nGFWsT1tL16DlRY4LeTtdzwa8nWLYbf9mvDRTtFpRV3JGXJWXqJeMcT1gDze6nz\n1rC0+RClAgMBAAECggEAAMImrYG4qZ2UKyoGP+AD+oTeE4DE9SgvfHpmb+peb2bg\nkPCcv6mOrVsMow6BaB/Rv8hS4rsYAXP8qkFHafqLdDbRPAJl/4adtcgQWFGLx7C9\nBfpUFeFEI+VbdY29zQqRw6ThqM4ienDWegOTZBVcE7SbZYPiNBNawtNg3oRrUF7u\niQpabv3IGzmknbPCcLwra01HkxJl2krftC9DC3+lT40E8f8NTM42lwmCKCoxiMGq\nNuzBGd8pNcjEz9YbUe5k8kOXUTFhWasdPeML+krW2LqCAZaN/BciAOzj3It3Atmh\n6gzsbbFQkejqL7UVoIYycmdoJRCJrqpKb6ZFTyObdQKBgQDdFrTS9/DEYDVxr2Sm\nW2/GqCzVJTKEuAK2/2eJbKwVsTOv9HDcT0NZO0TorGfUHPsaV/lRG3ulplCZOqLs\nyO6KyLlFTnctMqIuzxDkJ9h1McNaxiwZPJhF3kA2jYy5qkRwl6hf6TkXTEWMhubX\niJUl6ayY8/rQRW0L2uzXolvVYwKBgQDAxJQfgCOO5GEy+7E4nAvoY1vMMBBJV4/6\n6Gm2NxcEgBDwyuy5bVHd419q7wOL9N+s0feWjSam3L75TVToDzMuGsvwK0Q9zf/y\nwcsZsr7JUu4u4woivTHIpMhW77ELtZm8VIsuq30BSuSMsTkTr4fC6XlksWumvYO3\nlinoQDoEVwKBgQCgh/YwITu/OyRTMclhSY81rbMv6NxvpbTC71xcWn3xGkOvhUvV\ni/AZAIIed+DEEW76R9qN2+jB9KsdN4hJafRa7TgpbLn4JYXBezSGlbAEGGgCp1Yp\n1Oe0A5aYhdsijNE498WYLp33nrf5O5Kt+UxixPM/9Bev1llBfGrwf8EyhQKBgQCE\nBp9Eq+iut3BzELuigA4Pze1Tfh/Je7VbLc8pQ7X6GRSBNxrHLT6C8HWrsaQGOWLw\n5KXkcSxl4I7UBMkAX1i4XRYMmjWU9wAz7dMC+M9+59PGPS31+Qqd1253TJc/49M1\nj9n7zuxA9GBwk/j5qKEdN/cypemLPAV4udpd/Y8+5QKBgG0hh6ZX3hrBZjmPgGTU\nQnKfItf4MRv7Sd2c/dWZ0gSWCVV3VLTKQtCAsfTFMS7sYaIZ/hEQf798yzFqdaaB\nBYNNMYZqfgdOZGid9BLYzuMXIR3Lx+g6njMMrcCERb+t49mLhdYkO5C+OGrLef2L\n2KT8zCH/iTaGN/9jhTs1le3L\n-----END PRIVATE KEY-----\n",
+  "client_email": "corey-vickroy-jr@cs361-project-321201.iam.gserviceaccount.com",
+  "client_id": "109650606169212687286",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/corey-vickroy-jr%40cs361-project-321201.iam.gserviceaccount.com"
+}

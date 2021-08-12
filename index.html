@@ -6,19 +6,32 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script src="./index.js"></script>
+    <script src="./translate.js"></script>
     <img src="logo.PNG" alt="GoCamp Logo">
   </head>
   <body>
+
+  
+
     <input
     id="pac-input"
     class="controls"
     type="text"
     placeholder="Search Box"
-  />
+    />
 
-    <div id="info_div">
-        <img src="promontory.jpg" alt="Promontory Campground">
-    </div>
+    <div id="info_div"> </div>
+
+    <div id= "google-translate-element"></div>
+    
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script> 
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <aside class="filter-container">
 
       <h2>Filters</h2>
@@ -29,6 +42,7 @@
           <select id="filter-rv" class="filter-input" name="filter-rv">
             <option>No</option>
             <option>Yes</option>
+            <option>Any</option>
           </select>
         </div>
       </div>
@@ -39,6 +53,7 @@
           <select id="filter-pets" class="filter-input" name="filter-pets">
             <option selected value="">Yes</option>
             <option>No</option>
+            <option>Any</option>
           </select>
         </div>
       </div>

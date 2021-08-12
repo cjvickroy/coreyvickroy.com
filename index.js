@@ -20,7 +20,8 @@ var campgrounds = [
       picture: "https://campnative-images.s3.us-west-2.amazonaws.com/campgrounds/8416/large/o.jpg",
       site: "https://www.devilslakervpark.com/",
       desc: "Devils Lake RV Park is a top-rated RV desination located at the North entrance to Lincoln City, on the scenic Oregon coast. We have 90 RV sites ranging from tiny homes to 80' pull through spaces.",
-      rv: false
+      rv: true,
+      pets: true
   },
 
   {
@@ -30,7 +31,8 @@ var campgrounds = [
       picture: "https://loganroadrvpark.com/wp-content/uploads/2016/06/IMAGE12-1200x675.jpg",
       site: "https://loganroadrvpark.com/home/reservations-rates/",
       desc: "Logan Road RV Park is Lincoln City’s only RV Park west of Highway 101 where, “It’s Better at the Beach”. Amenities include access to Chinook Winds Casino Resort hotel spa and pool, free 24-hour shuttle service to Chinook Winds Casino Resort, Beach access only two blocks away, Chinook Winds Golf Course short drive away, free high speed Wi-Fi, free cable television and a grassy dog run.",
-      rv: false
+      rv: true,
+      pets: true
 
   },
 
@@ -41,7 +43,8 @@ var campgrounds = [
       picture: "https://bbcamp.org/wp-content/uploads/2020/05/dinning-hall.jpg",
       site: "https://bbcamp.org/lincolncity/",
       desc: "Anchored on the beautiful Devil’s Lake, BB Camp Retreat Center is a modern 13-acre lakefront facility, perfectly situated on the Oregon Coast! We offer friendly, professional, and affordable solutions for all your event and retreat needs for groups from 25 to 380 people. We are located just over two miles outside the coastal town of Lincoln City, which provides easy access to the beach, hiking trails, and many other outdoor attractions. After your adventures, the outlet malls and restaurants are just a stone’s throw away.",
-      rv: true
+      rv: false,
+      pets: false
 
   },
 
@@ -52,7 +55,8 @@ var campgrounds = [
       picture: "https://i4.ypcdn.com/blob/ebc56e22627d211451bf4b9eaf5d52fea54f2876_400x280_crop.jpg",
       site: "https://www.ohwy.com/or/t/trnsetrp.htm/",
       desc: "Located five miles from the junction of Hwys 18 and 101 in Lincoln City on SW 51st Street. Seven RV/Trailer sites (any length) with electricity, piped water and sewer hookups. Flush toilets and showers available. Nearby store, cafe, and laundry. Leashed pets allowed. Open year round.",
-      rv: false
+      rv: true,
+      pets: false
   },
 
   {
@@ -62,7 +66,8 @@ var campgrounds = [
       picture: "https://i.ytimg.com/vi/GxXNFrb2h7I/maxresdefault.jpg",
       site: "https://seaandsandrvpark.com/",
       desc: "Sea & Sand RV Park is conveniently located on Highway 101 just three miles north of Depoe Bay on the central Oregon coastline and eight miles south of Lincoln City. There are spectacular beach and ocean views from our terraced ocean RV sites, as well as beautiful and cozy forested campground sites, all with easy beach access. The sunsets in the summers and the storms in the winters offer wonderful memories to all our guests, and their pets. Whether you love the grey whales, are storm watchers, sightseers, want to fish, try your luck at one of the casinos, shop the boutiques, or just be a beach bum or couch potato for a few days- – -Sea & Sand RV Park provides you with a home away from home that is quiet, peaceful, relaxing and conveniently located. Activities are numerous for all ages. The seven mile sandy beach provides a sand box of agates, shells, and sometimes Japanese floats. Sightings of the migrating grey whales are almost a daily happening in Depoe Bay, and there are charter fleets at Depoe Bay and Newport for deep sea fishing, crabbing and whale watching. Also, fresh water fishing, including steelhead, salmon, and trout are in the local rivers and streams. One mile away is the beautiful resort of Salishan providing an 18 hole golf course and excellent shopping. If you like aquariums, lighthouses, factory outlets, good restaurants, casino gaming, and breathtaking views of the ocean you will find it all between Newport and Lincoln City.",
-      rv: true
+      rv: true,
+      pets: true
   }
 
 
@@ -94,7 +99,7 @@ function initMap() {
     ]
     });
 
-    const input = document.getElementById("pac-input");
+    const input = document.getElementById("pac-input"); 
     const searchBox = new google.maps.places.SearchBox(input);
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
     // Bias the SearchBox results towards current map's viewport.
@@ -149,12 +154,15 @@ function initMap() {
     });
 
 }
+//This function will create a marker at a given point using the Google Maps API.
 function createMarker(place) {
     var placeLoc = place.geometry.location;
+    //The marker will now display on the map
     var marker = new google.maps.Marker({
       map: map,
       position: place.geometry.location
     });
+    //Add a listener so that the marker responds when clicked on.
     google.maps.event.addListener(marker, 'click', function() {
         infowindow.setContent(place.name);
         infowindow.open(map, this);
@@ -179,13 +187,43 @@ function markCampground(campgroundInfo){
 
 }
 
+function reqListener(){
+  console.log(this.responseText);
+}
+
+//Show the campground information
 function showCampgroundInfo(campgroundInfo){
+
     document.getElementById("info_div").style.display = "block";
     var infoDiv = document.getElementById('info_div');
+
+    //Getting weather data using teammates microservice:
+    var request = new XMLHttpRequest();
+    var url = 'https://weathermicroservice.herokuapp.com/hourlyForecast';
+    request.open("POST", url, true);
+    request.setRequestHeader("Content-Type", "application/json");
+    request.addEventListener("load", reqListener);
+    if (request.readyState == 4 && request.status == 200){
+      var json = JSON.parse(request.responseText); 
+      console.log(json)
+      }
+    
+    var data = ({"lat:": campgroundInfo.lat, "long": campgroundInfo.long});
+    request.send(data);
+
     info_div.innerHTML = 'Campground Name: '
         + campgroundInfo.name
-        + '<br>Address: ' + campgroundInfo.address  + '<br>' + "<img src=" + campgroundInfo.picture + ">"
-        + "<a href=\"" + campgroundInfo.site + "\" target=\"_blank\">Show More</a>" + "<br><br>" + campgroundInfo.desc;
+        + '<br>Address: ' 
+        + campgroundInfo.address  
+        + '<br>' 
+        + "<img src=" 
+        + campgroundInfo.picture 
+        + ">"
+        + "<a href=\"" 
+        + campgroundInfo.site 
+        + "\" target=\"_blank\">Show More</a>" 
+        + "<br><br>" 
+        + campgroundInfo.desc;
 
 }
 
@@ -195,31 +233,31 @@ function moveMap(location, map){
 }
 
 function doFilterUpdate(){
-  RV = document.getElementById("filter-rv");
-  RVvalue = RV.options[RV.selectedIndex].value;
+  rv = document.getElementById("filter-rv"); //Grabbing the filter-rv element
+  pets = document.getElementById("filter-pets");//Grabbing the filter-pets element
+  rvValue = rv.options[rv.selectedIndex].value; //Grabbing the selected index of the filter-rv element
+  petsValue = Pets.options[pets.selectedIndex].value; //Grabbing the selected index of the filter-pets element
   console.log(RVvalue);
   console.log("Update button clicked.")
   for (const x in campgrounds){
     console.log(campgrounds[x].rv)
-   if (RVvalue == "Yes"){
-    if (campgrounds[x].rv == true){
+   if ((RVvalue == "Yes") && (Pets == "Yes")){
+    if ((campgrounds[x].rv == true) && (campgrounds[x].pets == true)){
        markers[x].setVisible(true);
     }
     else{
      markers[x].setVisible(false);
     }
   }
-  if (RVvalue == "No"){
-    if (campgrounds[x].rv == true){
+  if ((RVvalue == "No") && (PetsValue == "No")){
+    if ((campgrounds[x].rv == true)&&(campgrounds[x].pets == true)){
        markers[x].setVisible(false);
     }
     else{
      markers[x].setVisible(true);
     }
   }
-
-  }
-
+  
 }
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -230,4 +268,4 @@ window.addEventListener('DOMContentLoaded', function () {
     
   }
 
-});
+})};
