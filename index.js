@@ -12,8 +12,21 @@ var campgrounds = [
       site: "https://www.outdoorproject.com/united-states/oregon/promontory-park-campground/",
       desc: "The Promontory Park Campground is a densely packed area just south of the Promontory Park marina and day use area.  There are 50 sites total, 13 of which are large canvas tents called “yomes” that offer bunk bed accommodation for four people. The campground offers three public kitchen areas, showers, and a fishing dock on North Fork Reservoir that is accessible via trail.  The entire campground is shaded and removed from the highway, and some of the best sites overlook the water.  The campground’s layout makes it ideal for groups, even if you are unable to reserve the two group sites.  Simply grabbing neighboring sites will keep a group together and sidestep the issue of crowding. Given the close proximity of some of the sites, those seeking a little more privacy should choose a yome or a trailer space if the option is available. The real benefit of staying at Promontory Park Campground is the excellent access to the Clackamas River, North Fork Reservoir, several hiking options, or the other day use areas Promontory Park has to offer.  Additionally, many of the campgrounds farther up the river don’t accept reservations, so when the season becomes crowded, this may be a good option.",
       rv: true,
-      pets: true
+      pets: true,
+      number: "(503) 630-7229"
   },
+
+  {
+    name: "Lazy Bend Campground",
+    location: { lat: 45.190010, lng: -122.199150 },
+    address: "45200 OR-224, Estacada, OR 97023",
+    picture: "https://cdn.recreation.gov/public/images/67024.jpg",
+    site: "https://www.recreation.gov/camping/campgrounds/232841",
+    desc: "Lazy Bend Campground sits next to the Wild and Scenic Clackamas River, close to the city of Estacada. The adjacent river provides countless opportunities for rafting, kayaking, fishing and swimming. The lush, green campground is comfortable for individuals and families who want to escape into nature in Oregon's Mt. Hood National Forest.",
+    rv: true,
+    pets: false,
+    number: "(503) 630-5721"
+},
 
   {
       name: "Devils Lake RV Park",
@@ -23,7 +36,8 @@ var campgrounds = [
       site: "https://www.devilslakervpark.com/",
       desc: "Devils Lake RV Park is a top-rated RV desination located at the North entrance to Lincoln City, on the scenic Oregon coast. We have 90 RV sites ranging from tiny homes to 80' pull through spaces.",
       rv: true,
-      pets: true
+      pets: true,
+      number: '(541) 994-3400'
   },
 
   {
@@ -34,7 +48,8 @@ var campgrounds = [
       site: "https://loganroadrvpark.com/home/reservations-rates/",
       desc: "Logan Road RV Park is Lincoln City’s only RV Park west of Highway 101 where, “It’s Better at the Beach”. Amenities include access to Chinook Winds Casino Resort hotel spa and pool, free 24-hour shuttle service to Chinook Winds Casino Resort, Beach access only two blocks away, Chinook Winds Golf Course short drive away, free high speed Wi-Fi, free cable television and a grassy dog run.",
       rv: true,
-      pets: true
+      pets: true,
+      number: '(541) 994-4261'
 
   },
 
@@ -46,7 +61,8 @@ var campgrounds = [
       site: "https://bbcamp.org/lincolncity/",
       desc: "Anchored on the beautiful Devil’s Lake, BB Camp Retreat Center is a modern 13-acre lakefront facility, perfectly situated on the Oregon Coast! We offer friendly, professional, and affordable solutions for all your event and retreat needs for groups from 25 to 380 people. We are located just over two miles outside the coastal town of Lincoln City, which provides easy access to the beach, hiking trails, and many other outdoor attractions. After your adventures, the outlet malls and restaurants are just a stone’s throw away.",
       rv: false,
-      pets: false
+      pets: false,
+      number: '"B\'Nai B\'rith Camp'
 
   },
 
@@ -58,7 +74,8 @@ var campgrounds = [
       site: "https://www.ohwy.com/or/t/trnsetrp.htm/",
       desc: "Located five miles from the junction of Hwys 18 and 101 in Lincoln City on SW 51st Street. Seven RV/Trailer sites (any length) with electricity, piped water and sewer hookups. Flush toilets and showers available. Nearby store, cafe, and laundry. Leashed pets allowed. Open year round.",
       rv: true,
-      pets: false
+      pets: false,
+      number: '(541) 996-3801'
   },
 
   {
@@ -67,10 +84,35 @@ var campgrounds = [
       address: "4985 N, US-101, Depoe Bay, OR 97341",
       picture: "https://i.ytimg.com/vi/GxXNFrb2h7I/maxresdefault.jpg",
       site: "https://seaandsandrvpark.com/",
-      desc: "Sea & Sand RV Park is conveniently located on Highway 101 just three miles north of Depoe Bay on the central Oregon coastline and eight miles south of Lincoln City. There are spectacular beach and ocean views from our terraced ocean RV sites, as well as beautiful and cozy forested campground sites, all with easy beach access. The sunsets in the summers and the storms in the winters offer wonderful memories to all our guests, and their pets. Whether you love the grey whales, are storm watchers, sightseers, want to fish, try your luck at one of the casinos, shop the boutiques, or just be a beach bum or couch potato for a few days- – -Sea & Sand RV Park provides you with a home away from home that is quiet, peaceful, relaxing and conveniently located. Activities are numerous for all ages. The seven mile sandy beach provides a sand box of agates, shells, and sometimes Japanese floats. Sightings of the migrating grey whales are almost a daily happening in Depoe Bay, and there are charter fleets at Depoe Bay and Newport for deep sea fishing, crabbing and whale watching. Also, fresh water fishing, including steelhead, salmon, and trout are in the local rivers and streams. One mile away is the beautiful resort of Salishan providing an 18 hole golf course and excellent shopping. If you like aquariums, lighthouses, factory outlets, good restaurants, casino gaming, and breathtaking views of the ocean you will find it all between Newport and Lincoln City.",
+      desc: "Sea & Sand RV Park is conveniently located on Highway 101 just three miles north of Depoe Bay on the central Oregon coastline and eight miles south of Lincoln City. There are spectacular beach and ocean views from our terraced ocean RV sites, as well as beautiful and cozy forested campground sites, all with easy beach access. The sunsets in the summers and the storms in the winters offer wonderful memories to all our guests, and their pets. Whether you love the grey whales, are storm watchers, sightseers, want to fish, try your luck at one of the casinos, shop the boutiques, or just be a beach bum or couch potato for a few days- – -Sea & Sand RV Park provides you with a home away from home that is quiet, peaceful, relaxing and conveniently located. Activities are numerous for all ages. The seven mile sandy beach provides a sand box of agates, shells, and sometimes Japanese floats. Sightings of the migrating grey whales are almost a daily happening in Depoe Bay, and there are charter fleets at Depoe Bay and Newport for deep sea fishing, crabbing and whale watching.",
       rv: true,
-      pets: true
-  }
+      pets: true,
+      number: '(877) 821-2231'
+  },
+
+  {
+    name: "Lincoln City KOA Journey",
+    location: { lat: 44.994370, lng: -123.965981 },
+    address: "5298 NE Park Ln, Otis, OR 97368",
+    picture: "https://koa.com/content/campgrounds/lincoln-city/photos/37108photoa71a458b-3a4f-49dd-adfe-7b34e3acfd42.JPG",
+    site: "https://koa.com/campgrounds/lincoln-city/",
+    desc: "Start with a hearty breakfast from our Little Campfire Cafe, then hit the beach, Devils Lake or the Lincoln City Kite Festival (one in summer, one in fall). The area boasts miles of soft beaches, perfect for whale watching, lighthouse touring and glass-float finding. Yes, the \"float fairies\" of the Lincoln City Visitor and Convention Bureau hide thousands of handmade, multicolored glass floats along the beaches. You'll find the same beautiful floats for sale in the campground store. At the end of the day, \"float\" on back to KOA, close enough to the Pacific for easy access, yet inland enough to avoid coastal fog and wind. Pull-Thru RV Sites now have 50-amp service!",
+    rv: true,
+    pets: true,
+    number: '(541) 994-2961'
+},
+
+{
+  name: "Sunset Landing RV Park",
+  location: { lat: 44.884960, lng: -123.933860 },
+  address: "4274 Siletz Hwy, Lincoln City, OR 97367",
+  picture: "https://imageprocessor.digital.vistaprint.com/crop/11,302,3627x2419/width/1100/maxWidth/2000/https://uploads.documents.cimpress.io/v1/uploads/f4844a59-156d-4c40-a348-4a1285c76010~110/original?tenant=vbu-digital",
+  site: "https://www.sunsetlanding-rvpark.com/",
+  desc: "Sunset Landing is far enough inland to boast clear skies when the beach is socked in, temperatures here can register Many degrees warmer than elsewhere on the Coast. Sunset Landing on the banks of the Beautiful Siletz River offers you peace and serenity for your camping experience!",
+  rv: false,
+  pets: true,
+  number: '(541) 994-8880'
+}
 
 
 ]
@@ -210,22 +252,29 @@ function showCampgroundInfo(campgroundInfo){
           if(req.status >= 200 && req.status < 400){
               var response = JSON.parse(req.responseText);
               
-              //console.log(req.responseText);
+              console.log(req.responseText);
               responseJSON = JSON.parse(req.responseText);
               info_div.innerHTML = '<h2>'
               + campgroundInfo.name
               + '</h2>'
+              + '<br>'
+              + campgroundInfo.number
               + '<br>Address: ' 
               + campgroundInfo.address  
-              + '<br>' 
+              + '<br><br>' 
               + "<img src=" 
               + campgroundInfo.picture
               + ">"
               + '<br>'
-              + 'Current Weather forecast: ' 
+              + 'Current weather forecast: ' 
               + responseJSON.temperatureInfo[0].temp
               + ' degrees, '
               + responseJSON.temperatureInfo[0].weather
+              + '<br>'
+              + 'Tomorrow\'s weather forecast: '
+              + responseJSON.temperatureInfo[24].temp
+              + ' degress, '
+              + responseJSON.temperatureInfo[24].weather
               + '<br><br>'
               + "<a href=\"" 
               + campgroundInfo.site 
