@@ -222,8 +222,9 @@ function showCampgroundInfo(campgroundInfo){
               + ">"
               + '<br>'
               + 'Current Weather forecast: ' 
-              + responseJSON.temperatureInfo[0].temp;
-              + ' degrees'
+              + responseJSON.temperatureInfo[0].temp
+              + ' degrees, '
+              + responseJSON.temperatureInfo[0].weather
               + '<br>'
               + "<a href=\"" 
               + campgroundInfo.site 
@@ -239,10 +240,10 @@ function showCampgroundInfo(campgroundInfo){
               console.log("Error in network request: " + req.statusText);
           }
       });
-      req.send(JSON.stringify({"lat": campgroundInfo.lat, "long": campgroundInfo.long}));
-  
-    
+      console.log('{"lat": ' + '"' + campgroundInfo.location.lat + '"' + ', "long": ' + '"' + campgroundInfo.location.lng + '"' + '}');
+      req.send('{"lat": ' + '"' + campgroundInfo.location.lat + '"' + ', "long": ' + '"' + campgroundInfo.location.lng + '"' + '}');
 
+  
  
 }
 
