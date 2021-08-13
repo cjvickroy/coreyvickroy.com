@@ -1,3 +1,5 @@
+
+
 let map;
 
 
@@ -194,37 +196,54 @@ function reqListener(){
 //Show the campground information
 function showCampgroundInfo(campgroundInfo){
 
+    var responseJSON;
     document.getElementById("info_div").style.display = "block";
     var infoDiv = document.getElementById('info_div');
 
     //Getting weather data using teammates microservice:
-    var request = new XMLHttpRequest();
-    var url = 'https://weathermicroservice.herokuapp.com/hourlyForecast';
-    request.open("POST", url, true);
-    request.setRequestHeader("Content-Type", "application/json");
-    request.addEventListener("load", reqListener);
-    if (request.readyState == 4 && request.status == 200){
-      var json = JSON.parse(request.responseText); 
-      console.log(json)
-      }
+ 
+      var req = new XMLHttpRequest();
+      req.open("POST", 'https://weathermicroservice.herokuapp.com/hourlyForecast', true);
+      req.setRequestHeader('Content-Type', 'application/json');
+  
+      req.addEventListener('load', function(){
+          if(req.status >= 200 && req.status < 400){
+              var response = JSON.parse(req.responseText);
+              
+              //console.log(req.responseText);
+              responseJSON = JSON.parse(req.responseText);
+              info_div.innerHTML = 'Campground Name: '
+              + campgroundInfo.name
+              + '<br>Address: ' 
+              + campgroundInfo.address  
+              + '<br>' 
+              + "<img src=" 
+              + campgroundInfo.picture
+              + ">"
+              + '<br>'
+              + 'Current Weather forecast: ' 
+              + responseJSON.temperatureInfo[0].temp;
+              + ' degrees'
+              + '<br>'
+              + "<a href=\"" 
+              + campgroundInfo.site 
+              + "\" target=\"_blank\">Show More</a>" 
+              + "<br><br>" 
+              + campgroundInfo.desc;
+
+              console.log(responseJSON);
+              
+
+              //console.log(response)
+          } else {
+              console.log("Error in network request: " + req.statusText);
+          }
+      });
+      req.send(JSON.stringify({"lat": campgroundInfo.lat, "long": campgroundInfo.long}));
+  
     
-    var data = ({"lat:": campgroundInfo.lat, "long": campgroundInfo.long});
-    request.send(data);
 
-    info_div.innerHTML = 'Campground Name: '
-        + campgroundInfo.name
-        + '<br>Address: ' 
-        + campgroundInfo.address  
-        + '<br>' 
-        + "<img src=" 
-        + campgroundInfo.picture 
-        + ">"
-        + "<a href=\"" 
-        + campgroundInfo.site 
-        + "\" target=\"_blank\">Show More</a>" 
-        + "<br><br>" 
-        + campgroundInfo.desc;
-
+ 
 }
 
 //As of 7/27 This function works
