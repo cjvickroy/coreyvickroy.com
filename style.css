@@ -4,6 +4,7 @@
         height: 781px;
         z-index: 1;
       }
+
       
       /* Optional: Makes the sample page fill the window. */
       html,
@@ -21,12 +22,28 @@
         z-index: 100;
         position: absolute;
         background-color: #1db593;
-        top: 160px;
-        left: 1386px;
+        top: 120px;
+        left: 1550px;
         
         padding: 15px;
-        padding-right: 217px;
-        padding-bottom: 744px;
+        margin-left: 20px;
+
+        height:781px;
+        width: 500px;
+
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+
+    #info_div_empty{
+      position: absolute;
+      left: 1650px;
+      top: 430px;
+      width: 400px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: white;
+
     }
     
     #info_div img{
@@ -36,14 +53,18 @@
     .filter-container{
       position: absolute;
       left: 1050px;
-      top: 0px;
+      top: 15px;
       padding: 10px;
+      font-family: Arial, sans-serif;
+      color: white;
 
     }
 
     .filter-input-container{
       display: inline-block;
-      padding: 10px;
+      padding: 0px;
+      margin-right: 10px;
+      font-family: Arial, sans-serif;
 
     }
 

@@ -212,8 +212,9 @@ function showCampgroundInfo(campgroundInfo){
               
               //console.log(req.responseText);
               responseJSON = JSON.parse(req.responseText);
-              info_div.innerHTML = 'Campground Name: '
+              info_div.innerHTML = '<h2>'
               + campgroundInfo.name
+              + '</h2>'
               + '<br>Address: ' 
               + campgroundInfo.address  
               + '<br>' 
@@ -225,10 +226,10 @@ function showCampgroundInfo(campgroundInfo){
               + responseJSON.temperatureInfo[0].temp
               + ' degrees, '
               + responseJSON.temperatureInfo[0].weather
-              + '<br>'
+              + '<br><br>'
               + "<a href=\"" 
               + campgroundInfo.site 
-              + "\" target=\"_blank\">Show More</a>" 
+              + "\" target=\"_blank\">Visit website</a>" 
               + "<br><br>" 
               + campgroundInfo.desc;
 
