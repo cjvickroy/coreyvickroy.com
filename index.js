@@ -254,31 +254,33 @@ function moveMap(location, map){
 
 function doFilterUpdate(){
   rv = document.getElementById("filter-rv"); //Grabbing the filter-rv element
-  pets = document.getElementById("filter-pets");//Grabbing the filter-pets element
-  rvValue = rv.options[rv.selectedIndex].value; //Grabbing the selected index of the filter-rv element
-  petsValue = Pets.options[pets.selectedIndex].value; //Grabbing the selected index of the filter-pets element
-  console.log(RVvalue);
+  RVvalue = rv.options[rv.selectedIndex].value; //Grabbing the selected index of the filter-rv element
   console.log("Update button clicked.")
   for (const x in campgrounds){
     console.log(campgrounds[x].rv)
-   if ((RVvalue == "Yes") && (Pets == "Yes")){
-    if ((campgrounds[x].rv == true) && (campgrounds[x].pets == true)){
+   if ((RVvalue == "Yes")){
+    if ((campgrounds[x].rv == true)){
        markers[x].setVisible(true);
     }
     else{
      markers[x].setVisible(false);
     }
   }
-  if ((RVvalue == "No") && (PetsValue == "No")){
-    if ((campgrounds[x].rv == true)&&(campgrounds[x].pets == true)){
+  if ((RVvalue == "No")){
+    if ((campgrounds[x].rv == true)){
        markers[x].setVisible(false);
     }
     else{
      markers[x].setVisible(true);
     }
   }
-  
+
+  if ((RVvalue == "Any")){
+    markers[x].setVisible(true);
+  }
 }
+}
+  
 
 window.addEventListener('DOMContentLoaded', function () {
 
@@ -286,6 +288,6 @@ window.addEventListener('DOMContentLoaded', function () {
   if (filterUpdateButton) {
     filterUpdateButton.addEventListener('click', doFilterUpdate)
     
+    }
   }
-
-})};
+);
