@@ -254,19 +254,30 @@ function moveMap(location, map){
 
 function doFilterUpdate(){
   rv = document.getElementById("filter-rv"); //Grabbing the filter-rv element
+  pets = document.getElementById("filter-pets");
   RVvalue = rv.options[rv.selectedIndex].value; //Grabbing the selected index of the filter-rv element
+  PetsValue = pets.options[pets.selectedIndex].value;
   console.log("Update button clicked.")
   for (const x in campgrounds){
     console.log(campgrounds[x].rv)
-   if ((RVvalue == "Yes")){
-    if ((campgrounds[x].rv == true)){
+   if ((RVvalue == "Yes") && (PetsValue == "Yes")){
+    if ((campgrounds[x].rv == true) && campgrounds[x].pets == true){
        markers[x].setVisible(true);
     }
     else{
      markers[x].setVisible(false);
     }
   }
-  if ((RVvalue == "No")){
+  if ((RVvalue == "No") && (PetsValue == "No")){
+    if ((campgrounds[x].rv == true) && (campgrounds[x].pets == true)){
+       markers[x].setVisible(false);
+    }
+    else{
+     markers[x].setVisible(true);
+    }
+  }
+
+  if ((RVvalue == "No") && (PetsValue == "Yes")){
     if ((campgrounds[x].rv == true)){
        markers[x].setVisible(false);
     }
@@ -275,9 +286,52 @@ function doFilterUpdate(){
     }
   }
 
-  if ((RVvalue == "Any")){
+  if ((RVvalue == "Yes") && (PetsValue == "No")){
+    if ((campgrounds[x].pets == true)){
+       markers[x].setVisible(false);
+    }
+    else{
+     markers[x].setVisible(true);
+    }
+  }
+
+
+  if ((RVvalue == "Any") && (PetsValue == "Any")){
     markers[x].setVisible(true);
   }
+
+  if ((RVvalue == "Any") && (PetsValue == "Yes")){
+    markers[x].setVisible(true);
+  }
+  
+  if ((RVvalue == "Any") && (PetsValue == "No")){
+    if(campgrounds[x].pets == false){
+      markers[x].setVisible(false);
+    }
+    else{
+      markers[x].setVisible(true);
+    }
+  }
+
+  if ((RVvalue == "Yes") && (PetsValue == "Any")){
+    if(campgrounds[x].rv == true){
+      markers[x].setVisible(true);
+    }
+    else{
+      markers[x].setVisible(false);
+    }
+
+  }
+  if ((RVvalue == "No") && (PetsValue == "Any")){
+    if(campgrounds[x].rv == false){
+      markers[x].setVisible(false);
+    }
+    else{
+      markers[x].setVisible(true);
+    }
+  }
+
+
 }
 }
   
