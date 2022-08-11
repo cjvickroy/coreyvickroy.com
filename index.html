@@ -1,82 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>GoCamp - Find Your Next Campsite</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script src="./index.js"></script>
-    <script src="./translate.js"></script>
-    <img src="logo.PNG" alt="GoCamp Logo">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Corey Vickroy Jr</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body style="margin: 0px;">
 
-  
+    <main>
 
-    <input
-    id="pac-input"
-    class="controls"
-    type="text"
-    placeholder="Search Box"
-    />
-
-    <div id="info_div"> </div>
-
-    <div id="info_div_empty">
-      <h1>You haven't clicked on a campsite yet!</h1>
-      <br>
-      <h2>Click on a marker within the map to see some information.</h2>
-    </div>
-
-    <div id= "google-translate-element"></div>
-    
-    <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-    }
-    </script> 
-
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <aside class="filter-container">
-
-      <h2>Filters</h2>
-
-      <div class="filter-input-container">
-        <label for="filter-rv">RV Accessible</label>
-        <div class="filter-input-element">
-          <select id="filter-rv" class="filter-input" name="filter-rv">
-            <option>No</option>
-            <option>Yes</option>
-            <option>Any</option>
-          </select>
+        <div class="header" id="header">
+            <div class="header-content">
+                <div class="header-content-left">
+                    
+                </div>
+                <div class="header-content-right">
+                    </div>
+            </div>
         </div>
-      </div>
-
-      <div class="filter-input-container">
-        <label for="filter-pets">Pets Allowed</label>
-        <div class="filter-input-element">
-          <select id="filter-pets" class="filter-input" name="filter-pets">
-            <option>No</option>
-            <option>Yes</option>
-            <option>Any</option>
-          </select>
+        <div class="nav" id="nav">
+            <div class="nav-content">
+                <div class="nav-content-left">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="main" id="main">
+            <div class="main-content">
+                <div id="home"></div>
+                <div class="social-bar">
+                    <a href="https://www.linkedin.com/in/corey-v-5754a6228/" target="_blank" class="social-link">
+                        <img src="./svg/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="https://github.com/eskipdx" target="_blank" class="social-link">
+                        <img src="./svg/github.svg" alt="Github" class="social-icon"> </a>
+                </div>
+                <div class="intro-content">
+                    <div class="header-information">
+                        <h1>Corey Vickroy Jr</h1>
+                        <h2>Software Engineer</h2>
+                    </div>
+                    <div class="header-img">
+                        <img src="./images/headshot.png" alt="headshot" class="headshot">
+                    </div>
+                        
+                </div>
+                <div class="main-content-left">
+                    <p class="intro-about">I am a software engineer with a passion for for all edges of computer science. I have a proficient background in C++, C and Python. I also have experience with JavaScript, Kotlin, x86 assembly, Rust, and C#.</p>
+                    <div id="about"></div>
+                </div> 
 
+                <div class="about-section">
+                    <div class="about-title">
+                        <h2>ABOUT</h2>
+                    </div>
+                    <div class="divider-line"></div>
+                    <div class="about-content">
+                        <h4>WHAT I DO</h4>
+                        <p>I am currently a Computer Science student at Oregon State University. Though my focus is Simulation and Game Programming, I enjoy all areas of computer science. Previously, I spent two years at Clackamas Community College learning the basics of computer science. 
+                        <br><br>Currently, I hold a 3.69 GPA at Oregon State University and a combined GPA of 3.45. 
+                        <br>
+                        <p>I have been employed at Oregon State University since June 2022 as a Web Developer. My focus resides in using Drupal CMS to build and maintain web pages for the university.</p>
+                        </p>
+                        <br><br>
+                        <h4>AWARDS</h4>
+                        <ul>
+                            <li>2021 Fall Term Dean's List - College of Engineering, Oregon State University</li>
+                            <li>2021 Spring Term Dean's List - College of Engineering, Oregon State University</li>
+                        </ul>
+                        <br><br>
+                        <h4>SKILLS</h4>
+                        <div class="skills-list">
+                            <ul>
+                                <li>C++</li>
+                                <li>C</li>
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                                <li>Kotlin</li>
+                                <li>Rust</li>
+                                <li>x86 Assembly</li>
+                                <li>C#</li>
+                            </ul>
+                            <ul>
+                                <li>Drupal CMS</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Git/Github</li>
+                                <li>Linux and Unix</li>
+                                <li>Visual Studio Code</li>
+                                <li>SQL</li>
+                                <li>MongoDB</li>
+                            </ul>
 
-      <button id="filter-update-button" class="action-button">Update</button>
+                        </div>
+                        <div id="projects"></div>
+                </div>
 
-    </aside>
+                <div class="projects-section">
+                    <div class="projects-title">
+                        <h2>PROJECTS</h2>
+                    </div>
+                    <div class="projects-desc">
+                        <p>Here are some of the projects I have worked on.</p>
+                    </div>
+                    <div class="gallery">
+                        <div class="gallery-item">
+                            <a href="./brewfinder.html">
+                                <img src="./images/brewfinder-logo.png" alt="brewfinder" class="gallery-brewfinder">
+                            </a>
+                            <h3 class="gallery-title">BREWFINDER</h3>
+                        </div>
+                        <div class="gallery-item gallery-item-usli">
+                            <a href="./usli.html">
+                                <img src="./images/usli-logo.png" alt="usli" class="gallery-usli">
+                            </a>
+                            <h3 class="gallery-title">NASA USLI</h3>
+                        </div>
+                        <div class="gallery-item">
+                            <a href="./smallsh.html">
+                                <img src="./images/smallsh-logo.png" alt="smallsh" class="gallery-smallsh">
+                            </a>
+                            <h3 class="gallery-title">SMALLSH</h3>
+                        </div>
+                    </div>
 
-    <div id="map"></div>
+                </div>
+
+                <div class="contact-section">
+                    <div class="contact-title">
+                        <h2>CONTACT</h2>
+                    </div>
+                    <div class="divider-line"></div>
+                    <div class="contact-content">
+                        <p>
+                            Want to reach out? Send me an <a href="mailto:coreyvickroy@gmail.com">email</a> (coreyvickroy@gmail.com)
+                        </p>
+                        <p><br><br>You can also check out my socials:</p>
+                        <a href="https://www.linkedin.com/in/corey-v-5754a6228/" target="_blank" class="social-link">
+                            <img src="./svg/linkedin.svg" alt="LinkedIn" class="social-icon">
+                        </a>
+                        <a href="https://github.com/eskipdx" target="_blank" class="social-link">
+                            <img src="./svg/github.svg" alt="Github" class="social-icon"> </a>
+                </div>
+            </div>  
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-content-left">
+                <p>2022 Corey Vickroy Jr</p>
+            </div>
+            <div class="footer-content-right">
+                <p>Made in HTML5 and CSS3</p>
+                    
+    </footer>
     
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8Y2fG_EYUDRtDTUbkXexvMFjfDLk0n_Y&callback=initMap&libraries=&v=weekly&libraries=places"
-      async
-    ></script>
-    
+	<script src="index.js"></script>
   </body>
-  
 </html>

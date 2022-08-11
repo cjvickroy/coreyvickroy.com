@@ -1,0 +1,224 @@
+body {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+footer{
+background-color: #242424 !important;
+color: white !important;
+padding: 10px;
+text-align: center;
+font-family: 'Roboto';
+font-size: 16px;
+}
+
+element {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+element::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  background-color: rgb(65, 142, 186);
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.headshot {
+width: 160px;
+border-radius: 100px;
+
+}
+
+.intro-content {
+text-align: center;
+
+}
+
+.intro-content h1 {
+font-weight: lighter;
+font-family: 'Roboto';
+font-size: 80px;
+padding: 0px;
+margin-bottom: 20px;
+color: white;
+}
+
+.intro-content h2 {
+font-family: 'Roboto';
+margin-bottom: 60px;
+color: lightblue;
+}
+
+.nav {
+position: sticky;
+top: 0;
+z-index: 1;
+
+}
+
+.nav-content-left {
+display: table;
+width: 100%;
+text-align: center;
+padding-top: 20px;
+font-size: 20px;
+background-color: #242424;
+}
+
+.nav-content-left a {
+position: relative;
+bottom: 6px;
+padding: 5px 20px;
+margin: 10px;
+width: 10px;
+color: white;
+text-decoration: none;
+font-family: 'Roboto', sans-serif;
+border-bottom: 3px solid transparent;
+transition: opacity .3s ease, border-color .3s ease;
+
+}
+
+.nav-content-left a:hover{
+border-bottom: 3px solid lightblue;
+
+}
+
+.social-bar {
+display: flex;
+flex-direction: column;
+position: sticky;
+top: 50%;
+right: 10px;
+width: 56px;
+height: 100px;
+background-color: #242424;
+border-radius:  0px 5px 5px 0px;
+}
+
+.social-icon {
+width: 36px;
+margin: 6px 10px;
+}
+
+.social-icon:hover{
+filter: sepia(21%) saturate(420%) hue-rotate(160deg) brightness(52%) contrast(95%);
+background-color: unset;
+}
+
+.intro-about{
+color: white;
+text-align: center;
+width: 800px;
+margin: 60px auto;
+margin-bottom: 0px;
+font-family: 'Roboto';
+font-size: 20px;
+font-weight: lighter;
+}
+
+.about-section {
+margin: 100px auto;
+width: 800px;
+text-align: center;
+
+}
+
+.about-title {
+color: lightblue;
+font-family: 'Roboto';
+font-size: 22px;
+margin-bottom: 0px;
+margin-top: 70px;
+}
+
+.about-content {
+color: white;
+font-family: 'Roboto';
+font-size: 20px;
+}
+
+.skills-list {
+display: flex;
+flex-direction: row;
+gap: 40px;
+position: relative;
+left: 25%;
+}
+
+.skills-list ul{
+text-align: left;
+}
+
+.projects-title {
+color: lightblue;
+font-family: 'Roboto';
+font-size: 22px;
+margin-bottom: 0px;
+margin-top: 70px;
+}
+
+.projects-desc{
+color: white;
+font-family: 'Roboto';
+font-size: 20px;
+}
+
+.gallery {
+display: flex;
+flex-direction: row;
+gap: 100px;
+margin-top: 70px;
+position: relative;
+left: 10.5%;
+}
+
+.gallery-item img {
+border-radius: 100px;
+width: 140px;
+transition: all .1s ease-in-out;
+}
+
+.gallery-item img:hover{
+transform: scale(1.03);
+transition: all .1s ease-in-out;
+}
+
+.gallery-title {
+color: white;
+font-family: 'Roboto';
+}
+
+.contact-title {
+color: lightblue;
+font-family: 'Roboto';
+font-size: 22px;
+margin-bottom: 0px;
+margin-top: 70px;
+}
+
+.contact-content {
+color: white;
+font-family: 'Roboto';
+font-size: 20px;
+}
+
+.contact-content a {
+text-decoration: none;
+color: lightblue;
+font-weight: bolder;
+}
+
