@@ -5,11 +5,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-<<<<<<< HEAD
   background: #242424;
-=======
-  background-color: #242424;
->>>>>>> 0b90e8d6fba31901a781c6e3fec40bffa7c8ed93
 }
 
 footer{
@@ -106,7 +102,7 @@ border-bottom: 3px solid lightblue;
 display: flex;
 flex-direction: column;
 position: sticky;
-top: 50%;
+top: 45%;
 right: 10px;
 width: 56px;
 height: 100px;
