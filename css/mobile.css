@@ -1,3 +1,103 @@
-@media (max-width: 480px) {
-    
+@media (max-width: 650px) {
+
+    body,
+    html {
+        width: 100vw;
+    }
+
+    .about-section {
+        width: 100vw;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .social-bar {
+        display: none;
+    }
+
+    .nav-content-left a {
+        padding: 0px;
+        font-size: 18px;
+    }
+
+    .intro-content h1 {
+        font-size: 40px;
+
+    }
+
+    .intro-about {
+        width: 80vw;
+        text-align: center;
+    }
+
+    .about-title {
+        width: 100vw;
+        margin-bottom: 10px;
+    }
+
+    .about-content h4 {
+        text-align: center !important;
+    }
+
+    .about-content {
+        margin-top: 0px;
+        width: 80vw;
+        padding-left: auto;
+        margin-left: 10vw;
+        text-align: center;
+
+    }
+
+    .about-content>ul:nth-child(8) {
+        position: relative;
+        right: 10px;
+        text-align: left;
+    }
+
+    .skills-list ul {
+        padding-left: 0px;
+        padding-right: 40px;
+        width: 70vw;
+        margin-left: -13vw;
+        font-size: 18px;
+    }
+
+    .skills-list {
+        width: 70vw;
+    }
+
+    .skills-list ul li {
+        margin-top: 10px;
+    }
+
+    .projects-title {
+        width: 100vw !important;
+
+    }
+
+    .projects-desc {
+        width: 80vw;
+        margin-left: 10vw;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        left: 0px;
+        gap: 40px;
+    }
+
+    .contact-title {
+        width: 100vw;
+    }
+
+    .contact-content {
+        width: 80vw;
+        margin-left: 10vw;
+    }
+
+
 }
