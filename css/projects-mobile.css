@@ -1,0 +1,51 @@
+@media (max-width: 650px) {
+
+    body,
+    html {
+        width: 100vw;
+    }
+
+    .social-bar {
+        display: none;
+    }
+
+    .nav-content-left a {
+        padding: 0px;
+        font-size: 18px;
+    }
+    
+    .page-title {
+        width: 100vw;
+        
+    }
+    
+    .page-title h1 {
+        font-size: 60px;
+    }
+    
+    .project-content {
+        display: flex;
+        flex-direction: column;
+        left: 0px;
+        width: 100vw;
+        text-align: center;
+    }
+    
+    .project-desc {
+        width: 100vw;
+    }
+    
+    .project-desc ul {
+        padding-left: 0px;
+    }
+    
+    iframe {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .gallery-smallsh {
+        width: 90%;
+    }
+
+}
