@@ -50,21 +50,8 @@
 
     }
 
-    .about-content>ul:nth-child(8) {
-        position: relative;
-        right: 10px;
-        text-align: left;
-    }
-
-    .skills-list ul {
-        padding-left: 0px;
-        padding-right: 40px;
-        width: 70vw;
-        margin-left: -13vw;
-        font-size: 18px;
-    }
-
     .skills-list {
+        margin: unset;
         width: 70vw;
     }
 
@@ -100,4 +87,14 @@
     }
 
 
+}
+
+@media (max-width: 1300px){
+    .about-content {
+        flex-direction: column;
+        gap: unset;
+    }
+    .about-what-i-do {
+        width: 100%;
+    }
 }

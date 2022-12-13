@@ -1,42 +1,42 @@
 .page-title h1 {
-    color: white;
-    font-family: 'Roboto';
-    font-size: 80px;
-    text-align: center;
-    font-weight: lighter;
-    margin-bottom: 20px;
-  }
+  color: white;
+  font-family: 'Poppins';
+  font-size: 80px;
+  text-align: center;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.page-title h2 {
+  color: lightblue;
+  font-family: 'Poppins';
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 100px;
   
-  .page-title h2 {
-    color: lightblue;
-    font-family: 'Roboto';
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 100px;
-    
-  }
-  .project-content {
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
-    position: relative;
-    left: 26%;
-    width: 50%;
-    margin-bottom: 140px;
-  }
-  
-  .project-desc {
-    width: 600px;
-    color: white;
-  }
+}
+.project-content {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+
+  width: 50%;
+  margin-bottom: 140px;
+}
+
+.project-desc {
+  width: 600px;
+  color: white;
+}
 
 .project-desc h3{
-  color: lightblue;
-  font-family: 'Roboto';
+color: lightblue;
+font-family: 'Poppins';
 }
 
 .project-desc p,
 .project-desc li {
-  font-family: 'Roboto';
-  font-size: 18px;
+font-family: 'Poppins';
+font-size: 18px;
 }
